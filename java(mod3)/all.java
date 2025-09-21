@@ -317,7 +317,6 @@ class Arrayrepeated{
 	}
 }
 
-
 // output ->>
 // Enter the number of elements in array: 6
 // Enter 6 elements:
@@ -325,4 +324,194 @@ class Arrayrepeated{
 // The array is: 5 2 7 5 3 5
 // Enter the element to search: 5
 // The element 5 is repeated 3 time(s).
+
+
+
+// For single Dimensional array (at compile time)
+class Singledimen{
+	public static void main(String args[]){
+		int arr[] = {1,1,2,2};
+
+		System.out.print("Array elements are");
+		for(int i = 0; i < arr.length; i++){
+			System.out.print(arr[i] + " ");
+		}
+	}
+}
+
+
+// output ->>
+// Array elements are 1 1 2 2 
+
+
+// At runtime
+import java.util.*;
+class Singledimen{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the number of rows : ");
+		int n = sc.nextInt();
+
+
+		int a[] = new int[n];
+
+		System.out.print("Enter " + n + "elements :");
+		for(int i = 0; i < n ; i++){
+			a[i] = sc.nextInt();
+		}
+
+		System.out.print("Array is ");
+		for(int i = 0; i < n; i++){
+			System.out.print(a[i] + " ");
+		}
+	}
+}
+
+// output ->>
+// Enter the number of rows : 5
+// Enter 5 elements :
+// 10 20 30 40 50
+// Array is 10 20 30 40 50 
+
+
+// Multidimensional array(at compile time)
+class Multidimensional{
+	public static void main(String args[]){
+		int a[][] = new int[2][3];
+
+		a[0][0] = 1;
+		a[0][1] = 2;
+		a[0][2] = 3;
+		a[1][0] = 4;
+		a[1][1] = 5;
+		a[1][2] = 6;
+
+
+		System.out.print("The Multidimensional array is");
+		for(int i = 0; i < 2 ; i++){
+			for(int j = 0; j < 3; j++){
+				System.out.print(a[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+// output ->>
+
+// The Multidimensional array is:
+// 1 2 3 
+// 4 5 6 
+
+
+// Multidimensional(At runtime)
+import java.util.*;
+class Multidimensional{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter number of rows : ");
+		int r = sc.nextInt();
+
+		System.out.print("Enter the number of columns : ");
+		int c = sc.nextInt();
+
+		int a[][] = new int[r][c];
+
+		System.out.print("Enter the elements :");
+		for(int i = 0; i < r; i++){
+			for(int j = 0; j < c; j++){
+				a[i][j] = sc.nextInt();
+			}
+		}
+
+		System.out.print("The Array is :");
+		for(int i = 0; i < r; i++){
+			for(int j = 0; j < c ; j++){
+				System.out.print(a[i][j] + " ");
+			}
+		}
+	}
+	System.out.println(" ");
+}
+
+
+// output ->>
+// Enter number of rows : 2
+// Enter the number of columns : 3
+// Enter the elements:
+// 1 2 3
+// 4 5 6
+// The Array is:
+// 1 2 3 
+// 4 5 6 
+
+
+
+// Sum of rows and columns in array 
+import java.util.Scanner;
+class Arraysumrowscolum {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows : ");
+        int r = sc.nextInt();
+
+        System.out.print("Enter the number of columns : ");
+        int c = sc.nextInt();
+
+        int a[][] = new int[r][c];
+
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Array is:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < r; i++) {
+            int rowsum = 0;
+            for (int j = 0; j < c; j++) {
+                rowsum += a[i][j];
+            }
+            System.out.println("Sum of row " + (i + 1) + rowsum);
+        }
+
+        for (int j = 0; j < c; j++) {
+            int colsum = 0;
+            for (int i = 0; i < r; i++) {
+                colsum += a[i][j];
+            }
+            System.out.println("Sum of column " +(j + 1)+ colsum);
+        }
+    }
+}
+
+// output ->>
+// Enter the number of rows : 2
+// Enter the number of columns : 3
+// Enter the elements of the array:
+// 1 2 3
+// 4 5 6
+// Array is:
+// 1 2 3 
+// 4 5 6 
+// Sum of row 1 = 6
+// Sum of row 2 = 15
+// Sum of column 1 = 5
+// Sum of column 2 = 7
+// Sum of column 3 = 9
+
+
 
